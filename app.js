@@ -6,7 +6,7 @@ const https = require("https");
 //app.use(express.static("public"));
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(__dirname + "/public"));
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/index.html");
 });
